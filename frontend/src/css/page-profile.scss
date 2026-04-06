@@ -1,0 +1,130 @@
+.profile-page {
+    width: 100%;
+    height: 100dvh;
+    background-color: var(--background);
+    color: var(--white);
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.profile-header {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10vw;
+    overflow-y: hidden;
+    flex-shrink: 0;
+    border-bottom: 1px solid var(--grey-light);
+}
+
+.profile-user-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px
+}
+
+.profile-avatar {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: var(--border-md);
+}
+
+.profile-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profile-username {
+    font-size: var(--font-lg);
+}
+
+.profile-user-id {
+    color: var(--light);
+    cursor: pointer;
+    transition: color .3s;
+
+    &:active {
+        color: var(--green)
+    }
+}
+
+.edit-profile-button {
+    background-color: var(--grey-light);
+    color: var(--white);
+    padding: 7px 15px;
+    border: none;
+    border-radius: var(--border-md);
+    transition: background-color .3s;
+
+    &:hover {
+        background-color: var(--blue);
+    }
+}
+
+.profile-stats {
+    display: flex;
+    gap: 15px;
+}
+
+.profile-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-gallery {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 15px;
+}
+
+.gallery-title {
+    font-size: var(--font-lg);
+    text-align: center;
+}
+
+.gallery {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-bottom: 1px solid var(--grey-light);
+}
+
+.image {
+    width: 200px !important;
+    height: 200px;
+    border-radius: var(--border-md);
+    cursor: pointer;
+    animation: show-image .3s;
+    transition: transform .3s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.profile-back-button {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    color: var(--white);
+}
+
+@keyframes show-image {
+    from {
+        opacity: 0;
+    }
+}

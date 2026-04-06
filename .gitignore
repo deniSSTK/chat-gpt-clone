@@ -1,0 +1,13 @@
+.DS_Store
+.idea/
+
+backend/node_modules/
+backend/dist/
+backend/.env
+backend/firebaseServiceAccountKey.json
+backend/secrets/*.json
+
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local

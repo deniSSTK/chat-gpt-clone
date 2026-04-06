@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*TODO при клике на ошибку она пропадает*/
+
+:root {
+  --black: rgb(var(--black-n));
+  --black-n: 0, 0, 0;
+  --grey: #272828;
+  --white: white;
+  --light: #5d5d5d;
+  --very-light: #d9d9d9;
+  --yellow: #dede27;
+  --grey-light: #2f2f2f;
+  --grey-dark: #191a1a;
+  --white-n: 255, 255, 255;
+  --background: #212121;
+  --background-dark: #1a1a1a;
+
+  --blue: #1a416a;
+  --blue-light: #3783c8;
+  --violet: #6366F1;
+  --violet-light: #E0E7FF;
+  --amber: #F59E0B;
+  --amber-light: #FEF3C7;
+  --green: #10B981;
+  --green-light: #D1FAE5;
+  --red: #EF4444;
+  --red-light: #FECACA;
+  --purple: #8B5CF6;
+  --purple-light: #EDE9FE;
+
+  --border-sm: 8px;
+  --border-md: calc(var(--border-sm) * 2);
+  --border-lg: calc(var(--border-sm) * 5);
+
+  --font-sm: .8rem;
+  --font-md: 1rem;
+  --font-lg: 2rem;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  font-size: var(--font-md);
+  word-spacing: 1px;
+}
+
+head, body {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+}
+
+a {
+  color: var(--black);
+}
+
+.text-blue {
+  color: var(--blue);
+  font-style: oblique;
+  user-select: none;
+}
+
+.text-error {
+  color: var(--red);
+}
+
+.think {
+  color: var(--very-light);
+  max-height: 1rem;
+  overflow: hidden;
+  transition: max-height 1s, color .3s;
+  opacity: .8;
+}
+
+.think:hover {
+  max-height: 200dvh;
+}
+
+
+*::-webkit-scrollbar {
+  width: 8px;
+  cursor: pointer;
+}
+*::-webkit-scrollbar-track {
+  background: var(--grey);
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--grey-light);
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--white);
+}

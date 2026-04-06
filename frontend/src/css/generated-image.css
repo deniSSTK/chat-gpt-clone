@@ -1,0 +1,13 @@
+.image {
+    width: 400px;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    object-fit: contain;
+    border-radius: var(--border-md);
+    cursor: pointer;
+    transition: transform .3s;
+    animation: show-full-screen-image .3s;
+}
+.image:hover {
+    transform: scale(1.01);
+}

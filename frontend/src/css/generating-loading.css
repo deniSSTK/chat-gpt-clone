@@ -1,0 +1,29 @@
+.generation-loader {
+    flex-shrink: 0;
+    background-color: var(--light);
+    border-radius: var(--border-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.generation-loader::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    width: 10%;
+    height: 200%;
+    background: rgba(var(--white-n), .2);
+    animation: move 1s ease-out infinite;
+    transform: translateY(-50%) rotate(45deg);
+    box-shadow: 0 0 20px 20px rgba(var(--white-n), 0.2);
+}
+
+@keyframes move {
+    0% {
+        left: -200%;
+    }
+    100% {
+        left: 200%;
+    }
+}

@@ -1,0 +1,33 @@
+.password-score {
+    width: 400px;
+    height: 5px;
+    background-color: var(--very-light);
+    position: relative;
+}
+
+.password-score::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--red);
+    height: 100%;
+    width: 10%;
+    transition: background-color .3s, width .3s;
+}
+
+.password-score.mid::before {
+    background-color: var(--yellow);
+    width: 50%;
+}
+
+.password-score.high::before {
+    background-color: var(--green);
+    width: 100%;
+}
+
+@media (max-width: 750px) {
+    .password-score {
+        width: 80%;
+    }
+}

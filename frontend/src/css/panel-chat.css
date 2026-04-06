@@ -1,0 +1,130 @@
+.left-panel-container {
+    height: 100dvh;
+    width: 260px;
+    background: var(--grey-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+    padding-top: 15px;
+    opacity: 1;
+}
+.chats {
+    width: 100%;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    overflow-y: auto;
+    gap: 5px;
+}
+.chat-content {
+    width: 100%;
+}
+.chat-panel-button {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 7px 15px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    background: inherit;
+    color: var(--white);
+    flex-shrink: 0;
+    cursor: pointer;
+    border-radius: var(--border-sm);
+    transition: background .3s;
+    text-decoration: none;
+}
+.chat-panel-button.new-chat {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+.chat-panel-button:hover {
+    background: var(--grey);
+}
+.strong-title {
+    margin-top: 15px;
+    padding: 15px;
+    user-select: none;
+    font-size: var(--font-sm);
+}
+.chats::-webkit-scrollbar {
+    width: 4px;
+    cursor: pointer;
+}
+.chats::-webkit-scrollbar-track {
+    background: var(--grey-dark);
+}
+.chats::-webkit-scrollbar-thumb {
+    background: var(--grey);
+}
+.chats::-webkit-scrollbar-thumb:hover {
+    background: var(--grey-light);
+}
+
+.left-panel-close-icon {
+    display: none;
+}
+
+.open-left-panel-button {
+    display: none;
+}
+
+.button-menu-container {
+    display: none;
+}
+
+.left-panel-search-input {
+    width: 240px;
+    padding: 5px 15px;
+    border: none;
+    outline: none;
+    border-radius: var(--border-sm);
+    background: var(--grey-light);
+    color: var(--white);
+}
+
+@media (max-width: 750px) {
+    .button-menu-container {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 15px;
+    }
+
+    .open-left-panel-button {
+        cursor: pointer;
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        width: 30px;
+        height: 30px;
+        color: var(--white);
+    }
+    .left-panel-container {
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+    }
+    .left-panel-container-background {
+        position: fixed;
+        z-index: 9998;
+        width: 100%;
+        height: 100dvh;
+        background: var(--black);
+        opacity: .5;
+    }
+    .left-panel-close-icon {
+        cursor: pointer;
+        display: block;
+    }
+}

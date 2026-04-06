@@ -1,0 +1,90 @@
+.personalization-styles-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--light);
+    animation: show-styles-info .3s;
+
+    a {
+        color: var(--white);
+    }
+}
+
+.styles-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.style-icon {
+    display: flex;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 20px 15px;
+    border-radius: var(--border-sm);
+    user-select: none;
+    cursor: pointer;
+    background-color: var(--grey-light);
+    transition: background-color 0.3s;
+}
+
+.chosen.default {
+    background-color: var(--blue);
+    color: var(--blue-light);
+}
+
+.chosen.overmind {
+    background-color: var(--violet);
+    color: var(--violet-light);
+}
+
+.chosen.rival {
+    background-color: var(--amber);
+    color: var(--amber-light);
+}
+
+.chosen.soft {
+    background-color: var(--green);
+    color: var(--green-light);
+}
+
+.chosen.villain {
+    background-color: var(--red);
+    color: var(--red-light);
+}
+
+.chosen.chaotic {
+    background-color: var(--purple);
+    color: var(--purple-light);
+}
+
+.chosen.snoop-dogg {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.snoop-dogg {
+    background: none;
+    border: 2px solid var(--black);
+    color: var(--black);
+}
+
+.snoop-dogg img {
+    width: 24px;
+    height: 24px;
+}
+
+@keyframes show-styles-info {
+    from {
+        opacity: 0;
+    }
+}
