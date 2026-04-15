@@ -17,6 +17,17 @@ services:
       - ./backend/secrets:/app/secrets:ro
     restart: unless-stopped
 
+  backend-image:
+    build:
+      context: ./backend-image
+      dockerfile: Dockerfile
+    container_name: chat-gpt-clone-backend-image
+    environment:
+      - PORT=8000
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
   frontend:
     build:
       context: ./frontend
@@ -26,6 +37,7 @@ services:
     container_name: chat-gpt-clone-frontend
     depends_on:
       - backend
+      - backend-image
     ports:
       - "8080:80"
     restart: unless-stopped

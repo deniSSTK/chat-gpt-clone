@@ -2,9 +2,10 @@
 
 > [!WARNING]
 > This monorepo combines the original split repositories:
-> [chat-gpt-clone-backend](https://github.com/deniSSTK/chat-gpt-clone-backend)
+> [chat-gpt-clone-backend](https://github.com/deniSSTK/chat-gpt-clone-backend),
+> [chat-gpt-clone-frontend](https://github.com/deniSSTK/chat-gpt-clone-frontend),
 > and
-> [chat-gpt-clone-frontend](https://github.com/deniSSTK/chat-gpt-clone-frontend).
+> [model-fast-api](https://github.com/deniSSTK/model-fast-api).
 
 > [!IMPORTANT]
 > The live demo is currently unavailable because the backend is not deployed at the moment.
@@ -46,6 +47,7 @@ This repository contains the full project in one place:
 
 - `frontend` - a Vue 3 + Vite single-page application
 - `backend` - a NestJS API for authentication, chats, personalization, profiles, and Firebase integration
+- `backend-image` - a FastAPI service for image generation and chat completions using G4F
 
 Main features:
 
@@ -86,6 +88,10 @@ flowchart LR
 │   │   └── personalization/
 │   ├── Dockerfile
 │   └── .env.example
+├── backend-image/        # FastAPI service
+│   ├── main.py
+│   ├── requirements.txt
+│   └── Dockerfile
 ├── frontend/             # Vue 3 client
 │   ├── src/
 │   │   ├── components/
@@ -121,6 +127,7 @@ After startup:
 
 - frontend: `http://localhost:8080`
 - backend: `http://localhost:3000`
+- backend-image: `http://localhost:8000`
 
 ## Local development without Docker
 
@@ -190,13 +197,12 @@ Vite starts on `http://localhost:5173` by default.
 
 ## Notes
 
-- only the frontend and backend are containerized right now
-- text and image generation still depend on an external model API
-- if you want a fully self-hosted setup, the next step is to move the model API into this repository and add it as a third service in `docker-compose.yml`
+- all three services (frontend, backend, and backend-image) are now containerized
+- the backend-image service provides image generation and chat completions using G4F
+- the setup is now fully self-hosted within this repository
 
 ## Possible next improvements
 
-- move the model API into the monorepo
 - add healthchecks and a better startup strategy in compose
 - centralize environment setup at the root level
 - add root scripts so the whole project can be started without manually changing directories
